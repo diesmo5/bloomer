@@ -17,7 +17,12 @@
   </div>
 </section>
 
-<h1 class="font-weight-light text-center text-indigo-light" style="font-size: 96px;">96</h1>
+<h1
+  class="font-weight-light text-center text-indigo-light"
+  style="font-size: 96px;"
+>
+  96
+</h1>
 <h4 class="font-weight-bold text-center text-indigo-light">Overall</h4>
 <section id="score" class="py-5">
   <div class="container">
@@ -42,12 +47,10 @@
 </section> -->
 
 <section id="suggestions" class="pb-3">
+  {{ range $.Site.Data.home.sug}}
   <div class="container">
-    {{ range $.Site.Data.home.sug}}
-    <div class="row py-2 px-2">
-      <img class="w-100" src="{{.img}}" alt="" class="" />
-    </div>
-    {{end}}
+    <img class="w-100" src="{{.img}}" alt="" class="" />
   </div>
+  {{end}}
 </section>
 {{ end }}

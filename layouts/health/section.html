@@ -18,14 +18,12 @@
 </section> -->
 
 <section id="suggestions" class="py-3">
-  <div class="container">
-    {{ range .Pages }}
-    <a href="{{.URL}}" class="">
-      <div class="row col-12 py-2">
-        <img class="w-100" src="{{.Params.img}}" alt="" />
-      </div>
-    </a>
-    {{ end }}
-  </div>
+  {{ range .Pages }}
+  <a href="{{.URL}}" class="">
+    <div class="container py-2">
+      <img class="w-100" src="{{.Params.img}}" alt="" />
+    </div>
+  </a>
+  {{ end }}
 </section>
 {{ end }}
