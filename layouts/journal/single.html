@@ -1,0 +1,42 @@
+{{ define "main" }}
+<!--  -->
+{{ partial "navbar" . }}
+
+<section id="greeting" class=" pt-5">
+  <div class="container-fluid">
+    <h1 class="font-weight-light text-lowercase font-raleway text-center">
+      {{.Title}}
+    </h1>
+  </div>
+</section>
+
+<section id="score" class="py-5">
+  <div class="container">
+    <div class="py-4">
+      <h5 class="text-indigo-light">How did I feel today?</h5>
+      <h6 class="font-weight-normal">Today was Great</h6>
+    </div>
+    <div class="py-4">
+      <h5 class="text-indigo-light">Why am I feeling this way?</h5>
+      <h6 class="font-weight-normal">Today, my dog pooped all over my carpet and I had to clean it up, but it got all over me.</h6>
+    </div>
+    <div class="py-4">
+      <h5 class="text-indigo-light">What happened today?</h5>
+      <h6 class="font-weight-normal">I woke up then went back to sleep. I skipped class. I went to this hackathon.</h6>
+    </div>
+    <div class="py-4">
+      <h5 class="text-indigo-light">What can I accept that I can't change?</h5>
+      <h6 class="font-weight-normal">Not spending enough time on building this app.</h6>
+    </div>
+    <div class="py-4">
+      <h5 class="text-indigo-light">What am I grateful for?</h5>
+      <h6 class="font-weight-normal">The opportunity to participate in this hackathon.</h6>
+    </div>
+    <div class="py-4">
+      <h5 class="text-indigo-light">What are 3 goals that I want to accomplish tomorrow?</h5>
+      <h6 class="font-weight-normal">Win the hackathon. Give a good pitch. Go home and sleep.</h6>
+    </div>
+  </div>
+</section>
+
+{{ end }}
