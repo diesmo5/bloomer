@@ -1,0 +1,28 @@
+{{ define "main" }}
+<!--  -->
+{{ partial "navbar" . }}
+
+<section id="greeting" class=" pt-5">
+  <div class="container-fluid">
+    <h1 class="font-weight-light text-lowercase font-raleway text-center">{{.Title}}</h1>
+  </div>
+</section>
+
+<!-- <section id="score" class="py-5">
+  <div class="text-center">
+    <h1 class="font-weight-light" style="font-size: 96px;">96</h1>
+    <h4 class="font-weight-bold">Score</h4>
+  </div>
+</section> -->
+
+<section id="suggestions" class="py-3">
+  <div class="container">
+    <div class="row py-2 px-2">
+      <img class="w-100" src="/assets/fitness/gym.png" alt="" />
+    </div>
+    <div class="row py-2 px-2">
+      <img class="w-100" src="/assets/fitness/nutrition.png" alt="" />
+    </div>
+  </div>
+</section>
+{{ end }}

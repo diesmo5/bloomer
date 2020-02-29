@@ -1,0 +1,53 @@
+{{ define "main" }}
+<!--  -->
+<!-- {{ partial "navbar" . }} -->
+
+<section id="homenav" class="fixed-top py-2 border bg-white">
+  <div class="text-center">
+    <a href="/" class="text-amber">
+      <i class="fas fa-spa fa-3x"></i>
+    </a>
+  </div>
+</section>
+
+<div class="py-5"></div>
+<section id="greeting" class="pt-3">
+  <div class="container-fluid text-center">
+    <h1 class="font-weight-bold">Hello Poop</h1>
+  </div>
+</section>
+
+<h1 class="font-weight-light text-center" style="font-size: 96px;">96</h1>
+<h4 class="font-weight-bold text-center">Score</h4>
+<section id="score" class="py-5">
+  <div class="container">
+    <div class="row">
+      {{ range $.Site.Data.home.circle }}
+      <div class="col-6 text-center py-3">
+        <img src="{{.img}}" alt="" class="w-100" />
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<div class="py-5"></div>
+
+<!-- <section id="quote" class="pb-5">
+  <div class="container text-center">
+    <h5 class="">
+      Quote of the day: <br />
+      “It yabba dabba do be like that sometimes”
+    </h5>
+  </div>
+</section> -->
+
+<section id="suggestions" class="pb-3">
+  <div class="container">
+    {{ range $.Site.Data.home.sug}}
+    <div class="row py-2 px-2">
+      <img class="w-100" src="{{.img}}" alt="" class="" />
+    </div>
+    {{end}}
+  </div>
+</section>
+{{ end }}
