@@ -1,41 +1,56 @@
+{{ define "main" }}
+<!--  -->
+{{ partial "navbar" . }}
+
 <section class="pt-5">
-    <div class="container-fluid">
-        <h1 class="font-weight-light text-lowercase font-raleway text-center">surfing</h1>
-    </div>
+  <div class="container-fluid">
+    <h1 class="font-weight-light text-lowercase font-raleway text-center">
+      {{.Title}}
+    </h1>
+  </div>
 </section>
 
 <section class="pt-5 px-3">
-    <div class= "container-fluid bg-red rounded">
+  <div class="container-fluid bg-indigo-light rounded px-4 py-2 text-white">
+    <div class="row">
+      <div class="col-6 my-auto">
         <div class="row">
-            <h5>surfing</h5>
+          <h5 class=" font-weight-bold">Streak</h5>
         </div>
         <div class="row">
-            <h5>today: 1/5</h5>
+          <h5>This week: 1/5</h5>
         </div>
+      </div>
+      <div class="col-6 my-auto">
+        <h2 class="text-right">+</h2>
+      </div>
     </div>
+  </div>
 </section>
-    <section class="pt-5 px-3">
-        <div>
-            <div class="row">
-                <h5 class="pr-3" >set your goal: </h5>
-                <input type="text" maxlength="4" size="4" class= "rounded-pill"><br>                  
-            </div>
-            <div class="row">
-                    <h5 class="pr-3">Build or quit this habit: </h5>
-                    <input type="text" maxlength="4" size="4" class= "rounded-pill"><br>                  
-                    <input type="text" maxlength="4" size="4" class= "rounded-pill"><br>                  
-                </div>
-            <div class="row">
-                    <h5 class="pr-3" >chose your goal period: </h5>
-                    <input type="text" maxlength="4" size="4" class= "rounded-pill"><br>                  
-                    <input type="text" maxlength="4" size="4" class= "rounded-pill"><br>                  
-                    <input type="text" maxlength="4" size="4" class= "rounded-pill"><br>                  
-                    <input type="text" maxlength="4" size="4" class= "rounded-pill"><br>                  
-            </div>
-            <div class="row">
-                    <h5 class="pr-3" >add a note: </h5>
-                    <input type="text" maxlength="4" size="40" class= "rounded-pill"><br><br><br><br>                                   
-            </div>
 
-        </div>
-    </section>
+<section id="settings" class="py-4">
+  <div class="container">
+    <div class="row py-3">
+      <h5 class="px-4">Set your goal:</h5>
+      <input
+        type="text"
+        maxlength="4"
+        size="4"
+        class="rounded-pill px-3"
+        placeholder="x5/week"
+      /><br />
+    </div>
+    <div class="row py-3">
+      <h5 class="pl-4 px-2">Build or quit this habit:</h5>
+      <a href="" class="btn btn-indigo-light rounded-pill px-4 mr-2">Build</a>
+      <a href="" class="btn btn-grey-light rounded-pill px-4">Quit</a>
+    </div>
+    <div class="">
+      <h5 class="pl-2 px-2">Add a note:</h5>
+      <input type="text" maxlength="4" size="40" class="rounded-pill ml-2" />
+    </div>
+  </div>
+</section>
+
+
+{{ end }}
